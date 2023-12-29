@@ -1,5 +1,6 @@
 <script>
   // needed node.js installations: npm i rxjs
+  // added tailwind css see: https://tailwindcss.com/docs/guides/sveltekit
 
   import { onMount, onDestroy } from 'svelte';
   import { interval } from 'rxjs';
@@ -41,7 +42,7 @@
   });
 </script>
 
-<h1>Calendar Widget</h1>  
+<h1 class="font-bold">Calendar Widget</h1>  
 <!-- display events if they exist -->
 {#if events}
   <ul>
@@ -50,4 +51,8 @@
     {/each}
   </ul>
 {/if}
+
+<style>
+
+</style>
   
