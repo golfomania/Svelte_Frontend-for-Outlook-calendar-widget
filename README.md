@@ -25,9 +25,13 @@ the page is now opened without the top navigation bar.
 
 ## current status
 
+![Alt text](image.png)
+
 ## TODO / more ideas for the future
 
 - [] change favicon
+- [x] add loading spinner
+- [] handle too long names
 - [] softdelete events
 - [] trigger PowerShell script from frontend
 - [] add color to events based on time to start / end
