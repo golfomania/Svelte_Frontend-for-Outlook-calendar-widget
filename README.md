@@ -29,12 +29,12 @@ the page is now opened without the top navigation bar.
 
 ## TODO / more ideas for the future
 
-- [] change favicon
+- [ ] change favicon
 - [x] add loading spinner
-- [] handle too long names
-- [] softdelete events
-- [] trigger PowerShell script from frontend
-- [] add color to events based on time to start / end
-- [] add animations
-- [] integrate backend in svelte app
-- [] run database & frontend on server instead of local
+- [ ] handle too long names
+- [ ] softdelete events
+- [ ] trigger PowerShell script from frontend
+- [ ] add color to events based on time to start / end
+- [ ] add animations
+- [ ] integrate backend in svelte app
+- [ ] run database & frontend on server instead of local
