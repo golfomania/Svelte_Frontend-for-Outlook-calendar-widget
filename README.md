@@ -23,6 +23,14 @@ There in the save and share section create a shortcut and select "open as window
 You can also pin this shortcut to the taskbar.
 the page is now opened without the top navigation bar.
 
+## run the app locally
+
+npm run build
+
+npm run preview
+
+=> tested successfully
+
 ## current status
 
 ![Alt text](image.png)
