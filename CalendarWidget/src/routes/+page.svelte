@@ -22,10 +22,13 @@
 
   // on component mount, use rxjs to trigger fetchData every 10 seconds
   onMount(() => {
+    deletedEvents = [];
     subscription = interval(10000)
       .pipe(switchMap(() => fetchData()))
       .subscribe((result) => {
         events = result;
+        // filter out deleted events
+        events = events.filter((event) => !deletedEvents.includes(event.id));
       });
 
     // assign unsubscribe function to variable to be used on component unmount
@@ -40,6 +43,14 @@
       subscription.unsubscribe();
     }
   });
+
+  let deletedEvents = [];
+  const softdeleteEvent = (id) => {
+    deletedEvents.push(id);
+    console.log(deletedEvents);
+    events = events.filter((event) => event.id !== id);
+
+  };
 </script>
 
 <!--- <h1 class="font-bold">Calendar Widget</h1>-->  
@@ -67,7 +78,10 @@
                 </th>
                 <th scope="col" class="px-6 py-3">
                   location
-              </th>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  hide
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -92,6 +106,12 @@
                 <td class="px-6 py-4">
                   {event.location ? event.location : ''}
               </td>
+              <td class="px-6 py-4">
+                <svg class="w-3 h-3 text-gray-900 dark:text-white bin" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20" on:click={() => softdeleteEvent(event.id)}>
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
+                </svg>
+                
+            </td>
             </tr>
              {/each}
         </tbody>
@@ -110,6 +130,12 @@
       </li>
   </ul>
 {/if} 
+
+<style>
+  .bin:hover {
+    cursor: pointer;
+  }
+</style>
 
 
 
