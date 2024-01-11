@@ -39,7 +39,7 @@ npm run preview
 
 - [ ] change favicon
 - [x] add loading spinner
-- [ ] handle too long names
+- [x] handle too long names
 - [x] softdelete events
 - [ ] trigger PowerShell script from frontend
 - [ ] add color to events based on time to start / end
