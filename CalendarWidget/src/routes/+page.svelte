@@ -98,11 +98,11 @@
                 <td class="px-6 py-4">
                   {event.duration}
                 </td>
-                <td class="px-6 py-4">
-                  {event.endin ? event.endin : ''}
+                <td class="px-6 py-4 ">
+                  <span class="{event.endin < 10 && event.endin ? "yellowTextHighlight text-gray-900 px-3":""}">{event.endin ? event.endin : ''}</span>
                 </td>
                 <td class="px-6 py-4">
-                  {event.startin ? event.startin : ''}
+                  <span class="{event.startin < 15 && event.startin ? "greenTextHighlight text-gray-900 px-3":""}">{event.startin ? event.startin : ''}</span>
                 </td>
                 <td class="px-6 py-4">
                   {event.location ? event.location : ''}
@@ -136,6 +136,15 @@
   .bin:hover {
     cursor: pointer;
   }
+
+  .yellowTextHighlight {
+    background-color: #fbbf24;
+  }
+
+  .greenTextHighlight {
+    background-color: #34d399;
+  }
+
 </style>
 
 

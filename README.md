@@ -31,7 +31,7 @@ npm run preview
 
 => tested successfully
 
-## current status
+## status
 
 ![Alt text](image.png)
 
@@ -41,8 +41,12 @@ npm run preview
 - [x] add loading spinner
 - [x] handle too long names
 - [x] softdelete events
-- [ ] add color to events based on time to start / end
-- [ ] integrate backend in svelte app
-- [ ] trigger PowerShell script from frontend
+- [x] add color to events based on time to start / end
 - [ ] add animations
+- [ ] trigger PowerShell script from frontend
+- [ ] integrate backend in svelte app
 - [ ] run database & frontend on server instead of local
+
+## updated UI
+
+![Alt text](image-1.png)
