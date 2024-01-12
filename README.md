@@ -41,8 +41,8 @@ npm run preview
 - [x] add loading spinner
 - [x] handle too long names
 - [x] softdelete events
-- [ ] trigger PowerShell script from frontend
 - [ ] add color to events based on time to start / end
-- [ ] add animations
 - [ ] integrate backend in svelte app
+- [ ] trigger PowerShell script from frontend
+- [ ] add animations
 - [ ] run database & frontend on server instead of local
